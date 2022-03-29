@@ -170,27 +170,27 @@ section div {
 }
 
 #project-1 {
-    background-image: url(/assets/images/leaves.jpg);
+    background-image: url(./images/leaves.jpg);
     background-size: cover;
 }
 
 #project-2 {
-    background-image: url(/assets/images/peppers.jpg);
+    background-image: url(./images/peppers.jpg);
     background-size: cover;
 }
 
 #project-3 {
-    background-image: url(/assets/images/clouds.jpg);
+    background-image: url(./images/clouds.jpg);
     background-size: cover;
 }
 
 #project-4 {
-    background-image: url(/assets/images/snow-trees.jpg);
+    background-image: url(./images/snow-trees.jpg);
     background-size: cover;
 }
 
 #project-5 {
-    background-image: url(/assets/images/sunset.jpg);
+    background-image: url(./images/sunset.jpg);
     background-size: cover;
 }
 
