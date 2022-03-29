@@ -6,7 +6,8 @@
 
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: seagreen;
+    /* background-color: seagreen; */
+    box-sizing: border-box;
 }
 
 header {
@@ -30,22 +31,21 @@ h2 {
     text-align: right;
 }
 
-/* nav {
+.navbar {
     display: flex;
-    flex-basis: 50%;
     justify-content: flex-end;
-} */
+}
 
 nav ul {
-    display: inline-block;
-    padding-right: 15px;
+    display: inline;
+    padding-right: 10px;
     list-style: none;
 }
 
-/* nav li {
+nav li {
     padding-right: 15px;
     margin-right: 10px;
-} */
+}
 
 a {
     text-decoration: none;
@@ -66,10 +66,7 @@ main {
 } */
 
 section h2 {
-    /* flex: 2;
-    justify-content: end; */
-    background-color: aqua;
-    border: 2px solid black;
+    border-right: 2px solid var(--dark);
 }
 
 section div {
@@ -85,7 +82,6 @@ section div {
 }
 
 .about-me h2 {
-    background-color: crimson;
     margin: 20px;
     padding: 10px;
     height: 400px;
@@ -104,8 +100,10 @@ section div {
     flex-wrap: wrap;
 }
 
-#portrait {
-    padding: 10px;
+.portrait {
+    border-radius: 50%;
+    border: 3px solid whitesmoke;
+    float: inline-end;
 }
 
 .work-examples {
@@ -134,33 +132,52 @@ section div {
 .primary {
     flex: 100%;
     border: 2px solid black;
-    /* padding: 10px; */
     margin: 20px;
     height: 40%;
+}
+
+.project-label {
+    background-color: palevioletred;
+    height: 40px;
+    width: 80px;
 }
 
 .additional {
     flex: 40%;
     border: 2px solid black;
-    padding: 10px;
+    /* padding: 10px; */
     margin: 40px 20px 0px 20px;
     height: 21%;
+    min-height: 200px;
 }
 
 .box-img {
     max-width: 100%;
     width: auto;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
     display: block;
+    z-index: -1;
+}
+
+.primary-img {
+    max-width: 100%;
+    width: auto;
+    max-height: 400px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    z-index: -1;
 }
 
 footer {
-    background-color: salmon;
+    background-color: var(--dark);
     height: 200px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    padding-bottom: 60px;
+    padding-top: 20px;
 }
 
 footer h2 {
@@ -176,16 +193,52 @@ footer h2 {
     main {
         flex-direction: column;
     }
-    #about-title {
-        order: 2;
+
+    .about-me {
+        flex-basis: 0%;
+        display: inline;
+        border: none;
     }
-    .about {
-        order: 1;
+
+    .about-me h2 {
+        margin: 20px;
+        padding: 10px;
+        height: 40px;
     }
-    #portfolio-title {
-        order: 4;
+
+    section h2 {
+        border: none;
+        border-bottom: 2px solid var(--dark);
+        text-align: left;
     }
-    .container {
-        order: 3;
+
+    .work-examples {
+        display: inline;
     }
+
+    .work-examples h2 {
+        height: 40px;
+        margin: 20px;
+        padding: 10px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+    
+
 }
+
+@media screen and (max-width: 650px) {
+    header {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: fit-content;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+  }
