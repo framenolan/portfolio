@@ -1,13 +1,14 @@
 :root {
-    --dark: #0b1461;
+    --dark: #3a3a3a;
     --light-text: #ddd;
     --darkshadow: rgb(11, 20, 97, 30%)
 }
 
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* background-color: seagreen; */
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 header {
@@ -50,6 +51,9 @@ nav li {
 a {
     text-decoration: none;
     color: var(--light-text);
+}
+
+header a {
     font-size: 24px;
 }
 
@@ -60,13 +64,9 @@ main {
     flex-direction: row;
 }
 
-/* section {
-    padding: 10px;
-    margin: 5px;
-} */
-
 section h2 {
     border-right: 2px solid var(--dark);
+    color: var(--dark);
 }
 
 section div {
@@ -84,26 +84,32 @@ section div {
 .about-me h2 {
     margin: 20px;
     padding: 10px;
-    height: 400px;
+    height: auto;
+    min-height: 200px;
     flex-basis: 30%;
     min-width: 100px;
 }
 
 .about {
-    border: 2px dashed black;
+    border: 2px solid var(--dark);
     margin: 20px;
     padding: 10px;
-    height: 400px;
+    height: auto;
+    min-height: 200px;
     min-width: 400px;
     max-width: auto;
-    display: inline-flex;
-    flex-wrap: wrap;
 }
+
+.about p {
+    float: none;
+}
+
+
 
 .portrait {
     border-radius: 50%;
     border: 3px solid whitesmoke;
-    float: inline-end;
+    float: left;
 }
 
 .work-examples {
@@ -116,7 +122,8 @@ section div {
 
 .work-examples h2 {
     flex-basis: 30%;
-    height: 1000px;
+    height: auto;
+    /* min-height: 800px; */
     margin: 20px;
     padding: 10px;
 }
@@ -131,43 +138,60 @@ section div {
 
 .primary {
     flex: 100%;
-    border: 2px solid black;
+    border: 2px solid var(--dark);
     margin: 20px;
     height: 40%;
+    position: relative;
+    max-width: 100%;
+    width: auto;
+    max-height: 400px;
+    min-height: 200px;
+    height: auto;
 }
 
 .project-label {
-    background-color: palevioletred;
+    background-color: var(--dark);
+    color: var(--light-text);
     height: 40px;
-    width: 80px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    font-size: 20px;
+    padding: 8px;
 }
 
 .additional {
     flex: 40%;
-    border: 2px solid black;
-    /* padding: 10px; */
+    border: 2px solid var(--dark);
     margin: 40px 20px 0px 20px;
     height: 21%;
     min-height: 200px;
+    position: relative;
 }
 
-.box-img {
-    max-width: 100%;
-    width: auto;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    z-index: -1;
+#project-1 {
+    background-image: url(/assets/images/leaves.jpg);
+    background-size: cover;
 }
 
-.primary-img {
-    max-width: 100%;
-    width: auto;
-    max-height: 400px;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    z-index: -1;
+#project-2 {
+    background-image: url(/assets/images/peppers.jpg);
+    background-size: cover;
+}
+
+#project-3 {
+    background-image: url(/assets/images/clouds.jpg);
+    background-size: cover;
+}
+
+#project-4 {
+    background-image: url(/assets/images/snow-trees.jpg);
+    background-size: cover;
+}
+
+#project-5 {
+    background-image: url(/assets/images/sunset.jpg);
+    background-size: cover;
 }
 
 footer {
@@ -185,10 +209,19 @@ footer h2 {
     color: var(--light-text)
 }
 
-.additional:hover, .primary:hover {
-    background: var(--darkshadow);
+footer a {
+    font-size: 24px;
 }
 
+.additional:hover .project-label, .primary:hover .project-label {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+}
+
+/* Responsive layout, stacks Contact Me vertically for easier use */
 @media screen and (max-width: 992px) {
     main {
         flex-direction: column;
@@ -198,12 +231,14 @@ footer h2 {
         flex-basis: 0%;
         display: inline;
         border: none;
+        min-height: none;
     }
 
     .about-me h2 {
         margin: 20px;
         padding: 10px;
         height: 40px;
+        min-height: 40px;
     }
 
     section h2 {
@@ -225,10 +260,9 @@ footer h2 {
     footer {
         flex-direction: column;
     }
-    
-
 }
 
+/* Stacks nav bar vertically and centers it when screen is too narrow */
 @media screen and (max-width: 650px) {
     header {
         flex-direction: column;
