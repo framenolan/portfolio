@@ -153,9 +153,9 @@ section div {
     background-color: var(--dark);
     color: var(--light-text);
     height: 40px;
-    width: 100%;
+    width: calc(100% + 1px);
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     font-size: 20px;
     padding: 8px;
 }
@@ -196,13 +196,11 @@ section div {
 
 footer {
     background-color: var(--dark);
-    height: 200px;
+    height: 20vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding-bottom: 60px;
-    padding-top: 20px;
-}
+    padding: 20px 0px;}
 
 footer h2 {
     flex-basis: 30%;
@@ -214,7 +212,7 @@ footer a {
 }
 
 .additional:hover .project-label, .primary:hover .project-label {
-    height: 100%;
+    height: 101%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -259,7 +257,11 @@ footer a {
 
     footer {
         flex-direction: column;
+        /* justify-content: space-around; */
+        height: 30vh;
+        line-height: 250%;
     }
+
 }
 
 /* Stacks nav bar vertically and centers it when screen is too narrow */
@@ -269,10 +271,16 @@ footer a {
         justify-content: space-evenly;
         align-items: center;
         height: fit-content;
+        line-height: 250%;
+    }
+
+    header h1 {
+        margin-bottom: 10px;
     }
 
     .navbar {
         flex-direction: column;
         align-items: center;
     }
+
   }
