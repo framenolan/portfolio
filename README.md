@@ -20,4 +20,10 @@ This is a portfolio of my work as a web developer, showcasing some of my work an
 
 ## Images
 
-<img width="594" alt="image" src="https://user-images.githubusercontent.com/101062909/160530358-3ca5837c-8849-4e62-b46a-8a6f3212fd04.png">
+Desktop Layout:
+
+![screenshot desktop layout](https://user-images.githubusercontent.com/101062909/163896199-d607a71f-fc63-45af-b1b5-4b8ceb45dec9.png)
+
+Mobile Layout:
+
+![screenshot mobile layout](https://user-images.githubusercontent.com/101062909/163896282-379f56b8-2765-417d-9dd2-74db61e7ce58.png)
