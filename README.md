@@ -5,6 +5,7 @@
 ## Table of Contents
 * [Introduction](#introduction)
 * [Technologies](#technologies)
+* [Future Development](#future-development)
 * [Images](#images)
 
 ## Introduction
@@ -17,6 +18,12 @@ This is a portfolio of my work as a web developer, showcasing some of my work an
 - CSS
 - Media Queries for Responsive Layout
 - Flexbox
+
+## Future Development
+
+- Incorporate Javascript
+- Develop styling further for a more interesting aesthetic
+- Improve layout
 
 ## Images
 
