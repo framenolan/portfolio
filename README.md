@@ -7,6 +7,7 @@
 * [Technologies](#technologies)
 * [Future Development](#future-development)
 * [Images](#images)
+* [License](#license)
 
 ## Introduction
 
